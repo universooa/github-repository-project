@@ -3,14 +3,13 @@ defineProps<{
   msg: string
 }>()
 
-console.log("remote module")
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-    헬로 헬로 repository module test test
+    헬로 헬로 repository
     </h3>
   </div>
 </template>

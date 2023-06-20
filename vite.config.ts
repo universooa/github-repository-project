@@ -17,7 +17,7 @@ export default defineConfig({
       name: 'repository-app',
       filename: 'remoteEntry.js',
       exposes: {
-        './RepoContent': './src/components/HelloWorld.vue',
+        './RepoContent': './src/components/RepositoryApp.vue',
       },
       shared: ['vue', 'pinia'],
 
