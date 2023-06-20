@@ -4,15 +4,16 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg=" 날 보고 있다면 정답을 알려줘" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Repository Home</RouterLink>
+        <RouterLink to="/about">Repository about</RouterLink>
       </nav>
     </div>
   </header>
