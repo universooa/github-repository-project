@@ -6,14 +6,15 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
 
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/sky-stars-light-dark-logo.png" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg=" 날 보고 있다면 정답을 알려줘" />
+      <HelloWorld msg="Repository App" />
 
       <nav>
         <RouterLink to="/">Repository Home</RouterLink>
         <RouterLink to="/about">Repository about</RouterLink>
+        <RouterLink to="/repository">Repository App</RouterLink>
       </nav>
     </div>
   </header>
@@ -62,6 +63,10 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+  }
+  body {
+    display: flex;
+    place-items: center;
   }
 
   .logo {
