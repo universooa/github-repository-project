@@ -9,7 +9,7 @@ defineProps<{
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-    repository module
+    Repository App
     </h3>
   </div>
 </template>

@@ -1,25 +1,42 @@
-<template>
-  <div class="repository">
-<h3>remote </h3>
-  </div>
-</template>
-
 <script setup lang="ts">
+import { RouterView } from 'vue-router'
+import TheHeader from '@/components/layout/TheHeader.vue'
 
 </script>
 
+<template>
+  <header class="justify-center flex bg-yellow-300 items-center ">
+    <TheHeader/>
+  </header>
+
+  <div class="wrapper">
+    <RouterView />
+  </div>
+
+
+</template>
+
 <style scoped>
 
-h3 {
-  font-size: 1.2rem;
+header {
+  position: sticky;
+  top:0;
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
 @media (min-width: 1024px) {
-  .repository{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+}
 </style>

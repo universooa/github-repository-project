@@ -6,15 +6,15 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
 
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/sky-stars-light-dark-logo.png" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/sky-stars-light-dark-logo.png" width="50" height="50" />
 
     <div class="wrapper">
       <HelloWorld msg="Repository App" />
 
       <nav>
-        <RouterLink to="/">Repository Home</RouterLink>
-        <RouterLink to="/about">Repository about</RouterLink>
-        <RouterLink to="/repository">Repository App</RouterLink>
+        <RouterLink to="repository/repositoryHome">Repository Home</RouterLink>
+        <RouterLink to="repository/overview">overview</RouterLink>
+        <RouterLink to="repository/repositories">repositories</RouterLink>
       </nav>
     </div>
   </header>

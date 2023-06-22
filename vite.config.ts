@@ -4,22 +4,22 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import federation from "@originjs/vite-plugin-federation";
 import topLevelAwait from 'vite-plugin-top-level-await'
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "http://localhost:5174",
-  build: {
-    target: 'esnext',
-    minify: false,
-  },
+
   plugins: [
     vue(),
+    cssInjectedByJsPlugin(),
     federation({
       name: 'repository-app',
       filename: 'remoteEntry.js',
       exposes: {
         './RepoContent': './src/components/RepositoryApp.vue',
+        './RepoRoutes':'./src/router/index.ts'
       },
-      shared: ['vue', 'pinia'],
+      shared: ['vue','pinia',"vue-router"],
 
     }),
     topLevelAwait({
@@ -29,11 +29,17 @@ export default defineConfig({
       promiseImportName: i => `__tla_${i}`
     })
   ],
+  build: {
+    target: 'esnext',
+    minify: false,
+
+  },
   preview: {
     host: 'localhost',
     port: 5174,
     strictPort: true
   },
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
