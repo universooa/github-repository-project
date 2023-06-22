@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import federation from "@originjs/vite-plugin-federation";
 import topLevelAwait from 'vite-plugin-top-level-await'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+const dependencies = require("./package.json").dependencies;
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "http://localhost:5174",
@@ -16,10 +17,10 @@ export default defineConfig({
       name: 'repository-app',
       filename: 'remoteEntry.js',
       exposes: {
-        './RepoContent': './src/components/RepositoryApp.vue',
+        './RepoContent': './src/App.vue',
         './RepoRoutes':'./src/router/index.ts'
       },
-      shared: ['vue','pinia',"vue-router"],
+      shared: [{...dependencies },'vue','pinia',"vue-router"],
 
     }),
     topLevelAwait({

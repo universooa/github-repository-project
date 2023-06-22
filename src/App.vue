@@ -1,91 +1,39 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import TheHeader from '@/components/layout/TheHeader.vue'
 </script>
 
 <template>
-
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/sky-stars-light-dark-logo.png" width="50" height="50" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Repository App" />
-
-      <nav>
-        <RouterLink to="repository/repositoryHome">Repository Home</RouterLink>
-        <RouterLink to="repository/overview">overview</RouterLink>
-        <RouterLink to="repository/repositories">repositories</RouterLink>
-      </nav>
-    </div>
+  <header class="justify-center flex bg-yellow-300 items-center ">
+    <TheHeader/>
   </header>
 
-  <RouterView />
+  <div class="wrapper">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
+
 header {
+  position: sticky;
+  top:0;
   line-height: 1.5;
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+
   body {
     display: flex;
     place-items: center;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
+  .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>

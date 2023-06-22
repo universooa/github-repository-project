@@ -1,11 +1,11 @@
 <template>
   <img alt="Vue logo" class="logo" src="@/assets/sky-stars-light-dark-logo.png" width="50" height="50" />
   <nav>
-    <RouterLink to="/repository/overview">Overview</RouterLink>
-    <RouterLink to="/repository/repositories">Repositories</RouterLink>
-    <RouterLink to="/repository/projects">Projects</RouterLink>
-    <RouterLink to="/repository/packages">Packages</RouterLink>
-    <RouterLink to="/repository/stars">Stars</RouterLink>
+    <RouterLink to="/overview">Overview</RouterLink>
+    <RouterLink to="/repositories">Repositories</RouterLink>
+    <RouterLink to="/projects">Projects</RouterLink>
+    <RouterLink to="/packages">Packages</RouterLink>
+    <RouterLink to="/stars">Stars</RouterLink>
   </nav>
 </template>
 
