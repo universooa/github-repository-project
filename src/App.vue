@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import TheHeader from '@/components/layout/TheHeader.vue'
+import TheContents from "@/components/layout/TheContents.vue";
 </script>
 
 <template>
@@ -8,15 +8,16 @@ import TheHeader from '@/components/layout/TheHeader.vue'
     <TheHeader/>
   </header>
 
+  <body>
   <div class="wrapper">
-    <RouterView />
+    <TheContents />
   </div>
+  </body>
 </template>
 
 <style scoped>
 
 header {
-  position: sticky;
   top:0;
   line-height: 1.5;
   max-height: 100vh;

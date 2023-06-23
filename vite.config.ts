@@ -8,7 +8,6 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "http://localhost:5174",
 
   plugins: [
     vue(),
@@ -18,8 +17,6 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './RepoContent': './src/App.vue',
-        './HomeView':'./src/views/HomeView.vue',
-        './AboutView':'./src/views/AboutView.vue',
         './RepoRoutes':'./src/router/index.ts'
       },
       shared: ['vue','pinia',"vue-router"],
