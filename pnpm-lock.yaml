@@ -87,6 +87,9 @@ devDependencies:
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@18.16.17)
+  vite-plugin-preload:
+    specifier: ^0.3.1
+    version: 0.3.1(vite@4.3.9)
   vitest:
     specifier: ^0.32.0
     version: 0.32.0(jsdom@22.1.0)
@@ -478,6 +481,20 @@ packages:
       rollup:
         optional: true
     dev: false
+
+  /@rollup/pluginutils@5.0.2:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.1
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
 
   /@rushstack/eslint-patch@1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
@@ -4264,6 +4281,23 @@ packages:
     dependencies:
       vite: 4.3.9(@types/node@18.16.17)
     dev: false
+
+  /vite-plugin-preload@0.3.1(vite@4.3.9):
+    resolution: {integrity: sha512-WuaNOEoTOzQcVjrLrePJ37cNFDBdN9WMgqDtt4791DzkZVrXBJCdzlQsCqyvZ7QAuMQBQEApGRrIYOvdT9qIuA==}
+    peerDependencies:
+      vite: '>=4.0.0'
+    dependencies:
+      '@rollup/pluginutils': 5.0.2
+      jsdom: 22.1.0
+      prettier: 2.8.8
+      vite: 4.3.9(@types/node@18.16.17)
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - rollup
+      - supports-color
+      - utf-8-validate
+    dev: true
 
   /vite-plugin-top-level-await@1.3.1(vite@4.3.9):
     resolution: {integrity: sha512-55M1h4NAwkrpxPNOJIBzKZFihqLUzIgnElLSmPNPMR2Fn9+JHKaNg3sVX1Fq+VgvuBksQYxiD3OnwQAUu7kaPQ==}

@@ -16,7 +16,6 @@ export default defineConfig({
       name: 'repository-app',
       filename: 'remoteEntry.js',
       exposes: {
-        './RepoContent': './src/App.vue',
         './RepoRoutes':'./src/router/index.ts'
       },
       shared: ['vue','pinia',"vue-router"],

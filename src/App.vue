@@ -4,10 +4,10 @@ import TheContents from "@/components/layout/TheContents.vue";
 </script>
 
 <template>
+  <h1>Repository App</h1>
   <header class="justify-center flex bg-yellow-300 items-center ">
     <TheHeader/>
   </header>
-
   <body>
   <div class="wrapper">
     <TheContents />
