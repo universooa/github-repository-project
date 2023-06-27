@@ -6,6 +6,7 @@
     <RouterLink to="/repository/projects">Projects</RouterLink>
     <RouterLink to="/repository/packages">Packages</RouterLink>
     <RouterLink to="/repository/stars">Stars</RouterLink>
+    <RouterLink to="/repository/fileCompare">fileCompare</RouterLink>
   </nav>
 </template>
 
