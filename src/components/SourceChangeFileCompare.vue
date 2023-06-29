@@ -2,13 +2,17 @@
 
   <div class="title" id="title">
     <h1>Source Change File Compare Component </h1>
+    <CodeMirrorEditor/>
+<!--    <CodeMergeMirrorEditor/>-->
   </div>
+
   <div class="wrapper">
   <div id="code-diff">
     <code-diff
         :old-string="'12345'"
         :new-string="'3456'"
         output-format="side-by-side"/>
+
   </div>
 
   <div class="source_code_editor">
@@ -24,6 +28,8 @@
 <script setup >
 import SourceCodeEditor from "@/components/SourceCodeEditor.vue";
 import MergeSourceCodeEditor from "@/components/MergeSourceCodeEditor.vue";
+import CodeMirrorEditor from "@/components/CodeMirrorEditor.vue";
+// import CodeMergeMirrorEditor from "@/components/CodeMergeMirrorEditor.vue";
 
 </script>
 
