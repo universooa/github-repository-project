@@ -8,7 +8,7 @@
       <option v-for="(theme,idx) of themes" :value="theme" :key="idx">{{ theme }}</option>
     </select>
   </header>
-  <main >
+  <main>
     <VAceEditor
         ref="aceRef"
         v-model:value="states.content"
@@ -21,6 +21,7 @@
         enableSnippets: true,
         enableLiveAutocompletion: true,
         }"
+
         style="height: 300px"
     />
     <OutlineTree v-if="$refs.aceRef" class="outline-tree" :editor="$refs.aceRef._editor" :content="states.content" />
@@ -28,8 +29,10 @@
 </template>
 
 <script setup lang="ts">
-import { VAceEditor } from 'vue3-ace-editor';
-import { reactive, watch } from 'vue';
+// import { VAceEditor } from 'vue3-ace-editor';
+import { VAceEditor } from '@/vue3_ace_editor/index.ts';
+
+import {onMounted, reactive, watch} from 'vue';
 import './ace-config';
 import OutlineTree from './OutlineTree.vue';
 
@@ -38,10 +41,16 @@ const langs = ['json', 'javascript', 'html', 'yaml'];
 const themes = ['github', 'chrome', 'monokai'];
 
 const states = reactive({
-  lang: 'yaml',
+  lang: 'json',
   theme: 'github',
   content: '',
 });
+
+onMounted(()=>{
+
+
+})
+
 
 watch(
     () => states.lang,
@@ -78,9 +87,11 @@ main {
 }
 
 .vue-ace-editor {
+  //padding-left: 1000px;
+  width: 500px;
   font-size: 16px;
   border: 1px solid;
-  flex: 1;
+  //flex: 1;
 }
 
 .outline-tree {
